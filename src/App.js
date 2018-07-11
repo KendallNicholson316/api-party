@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, NavLink, Switch } from 'react-router-dom'
 
+import Pokemon from './Pokemon'
 import Github from './Github'
 import './App.css'
 
@@ -16,10 +17,12 @@ class App extends Component {
         <ul className="navLinks">
           <li>
             <NavLink to="/github">GitHub API</NavLink>
+			<NavLink to="/pokemon">Pok&eacute; API</NavLink>
           </li>
         </ul>
 		<Switch>
           <Route path="/github" component={Github} />
+		  <Route path="/pokemon" component={Pokemon} />
 		  <Route render={() => (
 			<p>To get started, click one of the links above.</p>
 		  )}/>
